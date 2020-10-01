@@ -172,7 +172,7 @@ for (tt in 1:dim(emo3)[1]){
  
   bibu=subset(x = three_rate$Rating,subset = three_rate$ProcEmo==emo3$ProcEmo[tt]&three_rate$emotion_shown==emo3$emotion_shown[tt]&three_rate$emotion_level==emo3$emotion_level[tt]&three_rate$cc==emo3$cc[tt])
   positions=which( emo3$right_emo==0 & emo3$emotion_shown==emo3$emotion_shown[tt] & emo3$emotion_level==emo3$emotion_level[tt] & emo3$cc==emo3$cc[tt])
-  vs=positions[which(emo3$relrates[positions]==max(emo3$relrates[positions]))][1]##[1] perchè possono esserci due vs
+  vs=positions[which(emo3$relrates[positions]==max(emo3$relrates[positions]))][1]##[1] perchÃ¨ possono esserci due vs
   bubi=subset(x = three_rate$Rating,subset = three_rate$ProcEmo==emo3$ProcEmo[vs]&three_rate$emotion_shown==emo3$emotion_shown[vs]&three_rate$emotion_level==emo3$emotion_level[vs]&three_rate$cc==emo3$cc[vs])
   #print(paste0(mean(bibu)," ",mean(bubi)))
   if (length(bibu)!=11|length(bubi)!=11)
